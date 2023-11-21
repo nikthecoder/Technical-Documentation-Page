@@ -1,0 +1,80 @@
+/* Style the main layout */
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+}
+
+#navbar {
+    width: 250px; /* Adjust the width as needed */
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    position: fixed; /* Set the position to fixed */
+    top: 0; /* Position it at the top of the viewport */
+    left: 0; /* Position it at the left side of the viewport */
+    height: 100%; /* Make it occupy the full height of the viewport */
+    overflow-y: auto; /* Add vertical scroll if content exceeds viewport height */
+}
+
+#main-doc {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 280px; /* Adjust this margin to create space for the navbar */
+}
+
+/* Style the navigation bar and links */
+#navbar header {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#navbar li {
+    margin-bottom: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Add some spacing between sections in the main content */
+.main-section {
+    margin-bottom: 30px;
+}
+
+header {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+code {
+    color: rgb(240, 233, 233);
+    background-color: rgb(25, 24, 24);
+    margin-left: 10px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* Media query for screens less than 768px wide */
+@media (max-width: 768px) {
+    #navbar {
+        width: 100%; /* Adjust the width for smaller screens */
+        position: static; /* Remove fixed positioning for smaller screens */
+        height: auto; /* Reset the height for smaller screens */
+        overflow-y: visible; /* Disable vertical scroll for smaller screens */
+    }
+    #main-doc {
+        margin-left: 0; /* Remove left margin for smaller screens */
+    }
+}
